@@ -1,11 +1,11 @@
 require "rails_helper"
 
-RSpec.describe "POST request to FibonacciController", :type => :request do
+RSpec.describe "POST request to FibonacciController", type: :request do
 
-  it "do a request with right params" do
+  it "its valid when doing a request with 'quantidade' parameter" do
     post "/fibonacci_sequence", params: { quantidade: 4 }
 
-    response.code.should eq "200"
+    expect(response.status).to eq(200)
   end
 
   # it "do a request without params" do
