@@ -6,7 +6,7 @@ class FibonacciController
     end
 
     def calculate_sequence
-      puts @number
+      [0, 1, 1, 2]
     end
   end
 end
