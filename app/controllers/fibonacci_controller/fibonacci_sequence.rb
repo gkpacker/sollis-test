@@ -1,6 +1,5 @@
 class FibonacciController
   class FibonacciSequence
-    after_initialize :calculate_sequence
 
     def initialize(number)
       @number = number
