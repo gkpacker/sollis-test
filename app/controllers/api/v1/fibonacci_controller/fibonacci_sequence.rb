@@ -7,7 +7,13 @@ module Api::V1
       end
 
       def calculate_sequence
-        [0, 1, 1, 2]
+        sequence = []
+        @number.to_i.times do
+          sequence << 0 && next if sequence.empty?
+          sequence << 1 && next if sequence.size == 1
+          sequence << sequence.last(2).sum
+        end
+        sequence
       end
     end
   end
