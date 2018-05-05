@@ -4,8 +4,8 @@ require 'json'
 
 RSpec.describe "POST request to FibonacciController", type: :request do
 
-  it "its valid when doing a request with 'quantidade' parameter" do
-    post "/api/v1/fibonacci_sequence", params: { quantidade: 4 }
+  it "it should have a 200 response status when accessing endpoint" do
+    post "/api/v1/fibonacci_sequence"
 
     expect(response.status).to eq(200)
   end
