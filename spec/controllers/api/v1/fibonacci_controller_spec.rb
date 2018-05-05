@@ -1,8 +1,7 @@
 require "rails_helper"
 require 'json'
 
-
-RSpec.describe "POST request to FibonacciController", type: :request do
+RSpec.describe Api::V1::FibonacciController, type: :controller do
 
   it "it should have a 200 response status when accessing endpoint" do
     post "/api/v1/fibonacci_sequence"
