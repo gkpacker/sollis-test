@@ -1,24 +1,21 @@
-# README
+# Teste de Programação Sollis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Orientações:
 
-Things you may want to cover:
+* Desenvolva uma API Rails 5 que receba um POST com um parâmetro chamado quantidade
 
-* Ruby version
+* O retorno da chamada deverá ser o resultado fibonacci da quantidade, por exemplo se o parametro 'quantidade' for 3, deverá retornar os 3 primeiros números da sequencia de fibonacci.
 
-* System dependencies
+* faça commits claros
 
-* Configuration
+* adicione testes à aplicação.
 
-* Database creation
+* evite usar gems para o calculo do fibonacci, o teste é de algoritimo
 
-* Database initialization
+* publique num repositório público no github
 
-* How to run the test suite
+# Rota
 
-* Services (job queues, cache servers, search engines, etc.)
+Deve-se fazer um POST request para a rota '/api/v1/fibonacci_sequence' com o parâmetro 'quantidade: n' e ele retornará os n primeiros números da sequencia de fibonacci.
 
-* Deployment instructions
 
-* ...
