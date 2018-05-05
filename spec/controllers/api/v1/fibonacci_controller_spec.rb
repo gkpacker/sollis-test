@@ -4,14 +4,14 @@ require 'json'
 RSpec.describe Api::V1::FibonacciController, type: :controller do
 
   it "it should have a 200 response status when accessing endpoint" do
-    post "/api/v1/fibonacci_sequence"
+    post "fibonacci_sequence"
 
     expect(response.status).to eq(200)
   end
 
   (1..300).each do |number|
     it "it should calculate first #{number} fibonacci sequence numbers" do
-      post "/api/v1/fibonacci_sequence", params: { quantidade: number }
+      post "fibonacci_sequence", params: { quantidade: number }
 
       data = JSON.parse(response.body)
       expect(data['sequence']).to eq(FIRST_300_NUMBERS[0..number - 1])
